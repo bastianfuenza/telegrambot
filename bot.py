@@ -28,7 +28,7 @@ FIRST, SECOND = range(2)
 
 
 def start(update: Update, context: CallbackContext) -> int:
-    """Starts the conversation and asks the user about their gender."""
+    """Starts the conversation and asks the user if they've watched."""
     reply_keyboard = [['Yes', 'Not Yet']]
 
     update.message.reply_text(
@@ -67,7 +67,7 @@ def watch(update: Update, context: CallbackContext) -> int:
 
 
 def info(update: Update, context: CallbackContext) -> int:
-    """Gives info on where to watch to watch."""
+    """Gives info on where to watch."""
 
     user = update.message.from_user
     recieved_message = update.message.text
@@ -107,7 +107,7 @@ def main() -> None:
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
 
-    # Add conversation handler with the states GENDER, PHOTO, LOCATION and BIO
+    # Add conversation handler with the states
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
         states={
