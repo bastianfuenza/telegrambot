@@ -1,12 +1,5 @@
 import logging
 
-from telegram import Update, ForceReply
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
-
-from bot_info import BOT_TOKEN
-
-import logging
-
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update
 from telegram.ext import (
     Updater,
@@ -16,6 +9,8 @@ from telegram.ext import (
     ConversationHandler,
     CallbackContext,
 )
+
+from bot_info import BOT_TOKEN
 
 # Enable logging
 logging.basicConfig(
